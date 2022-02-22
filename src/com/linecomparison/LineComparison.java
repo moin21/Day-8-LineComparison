@@ -32,10 +32,12 @@ public class LineComparison {
 		System.out.println("Enter Values For Second Point");
 		x4 = sc.nextInt();
 		y4 = sc.nextInt();
+		sc.close();
 		/*
 		 * Calling method to check equality
 		 */
-		lengthComparison(s1, s2);
+		 LineComparison compare =new LineComparison();
+	       compare.lengthComparison(s1, s2);
 	}
 /*
  * Method for line length calculation
@@ -49,7 +51,7 @@ public class LineComparison {
 	/*
 	 * Method to check equality in lengths of lines
 	 */
-	public static void lengthComparison(String s1,String s2) {
+	public void lengthComparison(String s1,String s2) {
 		if(s1.equals(s2)) {
 	    	   System.out.println("Two line are equal");
 	       }
