@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class LineComparison {
 	public static int x1, x2, y1, y2, x3, x4, y3, y4;
-	static double length1 = lengthCalculation(x1, x2, y1, y2);
-	static double length2 = lengthCalculation(x3, x4, y3, y4);
+	public static double length1 = lengthCalculation(x1, x2, y1, y2);
+	public static double length2 = lengthCalculation(x3, x4, y3, y4);
+	static String s1=String.valueOf(length1); 
+	static String s2=String.valueOf(length2);
 
 	public static void main(String[] args) {
 		/*
@@ -33,7 +35,7 @@ public class LineComparison {
 		/*
 		 * Calling method to check equality
 		 */
-		lengthComparison();
+		lengthComparison(s1, s2);
 	}
 /*
  * Method for line length calculation
@@ -47,11 +49,15 @@ public class LineComparison {
 	/*
 	 * Method to check equality in lengths of lines
 	 */
-	public static void lengthComparison() {
-		if (length1 == length2) {
-			System.out.println("Both lines are equal in length");
-		} else {
-			System.out.println("Both lines are not equal in length");
-		}
+	public static void lengthComparison(String s1,String s2) {
+		if(s1.equals(s2)) {
+	    	   System.out.println("Two line are equal");
+	       }
+	       else if(s1.compareTo(s2)>0){
+     	   System.out.println("length of line1 is greater than line2");
+        }
+	       else {
+	    	   System.out.println("length of line2 is greater than line1");
+	       }
 	}
 }
